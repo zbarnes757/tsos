@@ -11,7 +11,7 @@ export default function InTheBeginning() {
       </Head>
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
         <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">Our Story Begins</h1>
+          <h1 class="text-xl font-semibold text-center">Our Creator God</h1>
           <br />
           <p>
             The first thing we learn about the Lord is that he is a creator.{' '}
@@ -42,8 +42,9 @@ export default function InTheBeginning() {
           <p>
             Chapter 2 retells the creation narrative but focuses on the creation
             of humanity. In this chapter, we learn about the creation of Adam
-            and Eve and their life in the Garden of Eden. It tells us that God
-            formed man from the dust of the ground and breathed into his
+            and Eve and their life in{' '}
+            <span id="the-garden">the Garden of Eden</span>. It tells us that
+            God formed man from the dust of the ground and breathed into his
             nostrils the breath of life, and man became a living being. Then,
             God planted a garden in Eden and put Adam there to work it and take
             care of it. God also gave a commandment to Adam, the first
@@ -60,7 +61,7 @@ export default function InTheBeginning() {
         </div>
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/" content="Back" />
-          <NextStepButton href="#" content="Next" />
+          <NextStepButton href="/the_fall" content="Next" />
         </div>
       </div>
     </>

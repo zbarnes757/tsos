@@ -1,5 +1,6 @@
 import { Head } from '$fresh/runtime.ts';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryHyperlink from '../components/StoryHyperlink.tsx';
 
 export default function Home() {
   return (
@@ -17,11 +18,9 @@ export default function Home() {
             Here we will explore the interconnected story of the Bible. By
             stepping through each act, we will explore how each is part of a
             comprehensive whole. As we go, you will encounter{' '}
-            <a href="#" class="underline text-blue-500">
-              hyperlinks
-            </a>{' '}
-            to other parts of the story. This is intended to help you understand
-            how each part of the story is connected to the rest.
+            <StoryHyperlink href="#">hyperlinks</StoryHyperlink> to other parts
+            of the story. This is intended to help you understand how each part
+            of the story is connected to the rest.
             <br />
             <br />
             Shall we begin?
