@@ -4,19 +4,25 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/api/joke.ts";
-import * as $2 from "./routes/in_the_beginning.tsx";
-import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/the_fall.tsx";
+import * as $1 from "./routes/a_covenant_people.tsx";
+import * as $2 from "./routes/api/joke.ts";
+import * as $3 from "./routes/in_the_beginning.tsx";
+import * as $4 from "./routes/index.tsx";
+import * as $5 from "./routes/the_fall.tsx";
+import * as $6 from "./routes/the_problem.tsx";
+import * as $7 from "./routes/the_solution.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $0,
-    "./routes/api/joke.ts": $1,
-    "./routes/in_the_beginning.tsx": $2,
-    "./routes/index.tsx": $3,
-    "./routes/the_fall.tsx": $4,
+    "./routes/a_covenant_people.tsx": $1,
+    "./routes/api/joke.ts": $2,
+    "./routes/in_the_beginning.tsx": $3,
+    "./routes/index.tsx": $4,
+    "./routes/the_fall.tsx": $5,
+    "./routes/the_problem.tsx": $6,
+    "./routes/the_solution.tsx": $7,
   },
   islands: {
     "./islands/Counter.tsx": $$0,

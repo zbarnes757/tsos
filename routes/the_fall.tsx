@@ -44,11 +44,14 @@ export default function TheFall() {
             of Eden and placed cherubim to guard the way to the tree of life.
           </p>
           <br />
-          <p>A nuclear bomb had just gone off. What will its effects be?</p>
+          <p>
+            God does leave them with a promise though. One day someone will come
+            who will crush the head of the serpent. All is not lost.
+          </p>
         </div>
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/in_the_beginning" content="Back" />
-          <NextStepButton href="#" content="Next" />
+          <NextStepButton href="/the_problem" content="Next" />
         </div>
       </div>
     </>
