@@ -48,7 +48,7 @@ export default function ACovenantPeople() {
         </div>
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/the_solution" content="Back" />
-          <NextStepButton href="#" content="Next" />
+          <NextStepButton href="/a_covenant_king" content="Next" />
         </div>
       </div>
     </>
