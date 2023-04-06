@@ -31,7 +31,7 @@ export default function ReturnToTheLand() {
         </div>
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/exile" content="Back" />
-          <NextStepButton href="#" content="Next" />
+          <NextStepButton href="/christ_has_come" content="Next" />
         </div>
       </div>
     </>
