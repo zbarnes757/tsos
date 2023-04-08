@@ -7,13 +7,16 @@ import * as $0 from "./routes/_app.tsx";
 import * as $1 from "./routes/a_covenant_king.tsx";
 import * as $2 from "./routes/a_covenant_people.tsx";
 import * as $3 from "./routes/api/joke.ts";
-import * as $4 from "./routes/exile.tsx";
-import * as $5 from "./routes/in_the_beginning.tsx";
-import * as $6 from "./routes/index.tsx";
-import * as $7 from "./routes/return_to_the_land.tsx";
-import * as $8 from "./routes/the_fall.tsx";
-import * as $9 from "./routes/the_problem.tsx";
-import * as $10 from "./routes/the_solution.tsx";
+import * as $4 from "./routes/christ_has_come.tsx";
+import * as $5 from "./routes/end_of_the_age.tsx";
+import * as $6 from "./routes/exile.tsx";
+import * as $7 from "./routes/in_the_beginning.tsx";
+import * as $8 from "./routes/index.tsx";
+import * as $9 from "./routes/return_to_the_land.tsx";
+import * as $10 from "./routes/the_already_but_not_yet.tsx";
+import * as $11 from "./routes/the_fall.tsx";
+import * as $12 from "./routes/the_problem.tsx";
+import * as $13 from "./routes/the_solution.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -22,13 +25,16 @@ const manifest = {
     "./routes/a_covenant_king.tsx": $1,
     "./routes/a_covenant_people.tsx": $2,
     "./routes/api/joke.ts": $3,
-    "./routes/exile.tsx": $4,
-    "./routes/in_the_beginning.tsx": $5,
-    "./routes/index.tsx": $6,
-    "./routes/return_to_the_land.tsx": $7,
-    "./routes/the_fall.tsx": $8,
-    "./routes/the_problem.tsx": $9,
-    "./routes/the_solution.tsx": $10,
+    "./routes/christ_has_come.tsx": $4,
+    "./routes/end_of_the_age.tsx": $5,
+    "./routes/exile.tsx": $6,
+    "./routes/in_the_beginning.tsx": $7,
+    "./routes/index.tsx": $8,
+    "./routes/return_to_the_land.tsx": $9,
+    "./routes/the_already_but_not_yet.tsx": $10,
+    "./routes/the_fall.tsx": $11,
+    "./routes/the_problem.tsx": $12,
+    "./routes/the_solution.tsx": $13,
   },
   islands: {
     "./islands/Counter.tsx": $$0,

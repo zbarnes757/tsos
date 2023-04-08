@@ -2,7 +2,7 @@ import { Head } from '$fresh/runtime.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
 
-export default function ChristHasCome() {
+export default function TheAlreadyButNotYet() {
   return (
     <>
       <Head>
