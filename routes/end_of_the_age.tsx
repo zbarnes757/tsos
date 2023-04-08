@@ -1,7 +1,10 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
+import ReferencedSection from '../islands/ReferencedSection.tsx';
+import { isSelectedID } from '../utils/index.ts';
 
-export default function EndOfTheAge() {
+export default function EndOfTheAge(props: PageProps) {
   return (
     <>
       <Head>
@@ -23,6 +26,11 @@ export default function EndOfTheAge() {
             The earth will be remade and a new Jerusalem, both a city and a
             garden, will be the center of all things. The glory of God will
             illuminate everything, so the Sun and Moon will not be necessary.
+            <ReferencedSection
+              id="all_nations"
+              selected={isSelectedID(props, 'all_nations')}
+              content="All nations, tribes, and languages will be present and worshipping the Lord."
+            />
           </p>
           <br />
           <p>

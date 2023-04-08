@@ -15,7 +15,7 @@ export default function TheFall() {
           <br />
           <p>
             In the{' '}
-            <StoryHyperlink href="/in_the_beginning#the-garden">
+            <StoryHyperlink href="/in_the_beginning?ref=the_garden">
               Garden of Eden
             </StoryHyperlink>
             , Adam and Eve lived in perfect harmony with God, but this was not
@@ -45,8 +45,11 @@ export default function TheFall() {
           </p>
           <br />
           <p>
-            God does leave them with a promise though. One day someone will come
-            who will crush the head of the serpent. All is not lost.
+            God does leave them with a promise though.{' '}
+            <StoryHyperlink href="/christ_has_come?ref=promised">
+              One day someone will come who will crush the head of the serpent.
+            </StoryHyperlink>{' '}
+            All is not lost.
           </p>
         </div>
         <div class="pt-10 w-full flex  justify-evenly">

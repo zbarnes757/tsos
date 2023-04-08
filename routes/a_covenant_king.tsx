@@ -1,8 +1,11 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import ReferencedSection from '../islands/ReferencedSection.tsx';
+import { isSelectedID } from '../utils/index.ts';
 
-export default function ACovenantKing() {
+export default function ACovenantKing(props: PageProps) {
   return (
     <>
       <Head>
@@ -46,9 +49,11 @@ export default function ACovenantKing() {
           </p>
           <br />
           <p>
-            Despite his sins, God promises that the Messiah will come from
-            David's line, and David's reign is seen as a foreshadowing of the
-            reign of Christ.
+            <ReferencedSection
+              id="davidic_covenant"
+              selected={isSelectedID(props, 'davidic_covenant')}
+              content="Despite his sins, God promises that the Messiah will come from David's line, and David's reign is seen as a foreshadowing of the reign of Christ."
+            />
           </p>
         </div>
         <div class="pt-10 w-full flex  justify-evenly">

@@ -1,7 +1,11 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
-export default function TheSolution() {
+import ReferencedSection from '../islands/ReferencedSection.tsx';
+import { isSelectedID } from '../utils/index.ts';
+
+export default function TheSolution(props: PageProps) {
   return (
     <>
       <Head>
@@ -17,9 +21,12 @@ export default function TheSolution() {
             The story takes a turn and focuses on one man and his family. His
             name is Abram (later Abraham) and his wife is Sarai (later Sarah).
             God calls Abram and tells him to go to the land he will show him.
-            God makes an unconditional covenant with Abram. He promises to give
-            him land, and a people, and that through him, all the nations would
-            be blessed.
+            God makes an unconditional covenant with Abram.{' '}
+            <ReferencedSection
+              id="abrahamic_covenant"
+              selected={isSelectedID(props, 'abrahamic_covenant')}
+              content="He promises to give him land, and a people, and that through him, all the nations would be blessed."
+            />
           </p>
           <br />
           <p>

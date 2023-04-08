@@ -1,6 +1,7 @@
 import { Head } from '$fresh/runtime.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryHyperlink from '../components/StoryHyperlink.tsx';
 
 export default function TheFall() {
   return (
@@ -40,9 +41,12 @@ export default function TheFall() {
           <p>
             The humans that descended from Noah and his family come together to
             build a tower to reach the heavens. It is the ultimate vanity
-            project. Before they could finish, God confused their language and
-            scattered them across the earth, resulting in the creation of
-            different languages and cultures.
+            project.{' '}
+            <StoryHyperlink href="/end_of_the_age?ref=all_nations">
+              Before they could finish, God confused their language and
+              scattered them across the earth, resulting in the creation of
+              different languages and cultures.
+            </StoryHyperlink>
           </p>
         </div>
         <div class="pt-10 w-full flex  justify-evenly">

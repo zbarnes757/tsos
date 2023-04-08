@@ -1,8 +1,11 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import ReferencedSection from '../islands/ReferencedSection.tsx';
+import { isSelectedID } from '../utils/index.ts';
 
-export default function InTheBeginning() {
+export default function InTheBeginning(props: PageProps) {
   return (
     <>
       <Head>
@@ -31,8 +34,12 @@ export default function InTheBeginning() {
           </p>
           <br />
           <p>
-            God created a land called Eden and placed a garden within it. There
-            he placed the first man, Adam, where he tended to plants and
+            <ReferencedSection
+              id="the_garden"
+              selected={isSelectedID(props, 'the_garden')}
+              content="God created a land called Eden and placed a garden within it."
+            />
+            There he placed the first man, Adam, where he tended to plants and
             animals. God gave Adam one commandment: "You may surely eat of every
             tree of the garden, but of the tree of the knowledge of good and
             evil you shall not eat, for in the day that you eat of it you shall

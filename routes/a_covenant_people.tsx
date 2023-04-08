@@ -1,8 +1,11 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import ReferencedSection from '../islands/ReferencedSection.tsx';
+import { isSelectedID } from '../utils/index.ts';
 
-export default function ACovenantPeople() {
+export default function ACovenantPeople(props: PageProps) {
   return (
     <>
       <Head>
@@ -32,11 +35,16 @@ export default function ACovenantPeople() {
           <br />
           <p>
             Their escape takes them into the desert wilderness between Egypt and
-            Palestine. They camp at the foot of Mount Sinai, where God makes
-            another covenant with them. This covenant is conditional on the
-            Israelites upholding their end of it. It is designed to make them
-            into the type of people that should inhabit the land and comes with
-            blessings for obedience and curses for disobedience.
+            Palestine.{' '}
+            <ReferencedSection
+              id="mosaic_covenant"
+              selected={isSelectedID(props, 'mosaic_covenant')}
+              content=" They camp at the foot of Mount Sinai, where God makes another covenant with them through the mediator Moses."
+            />{' '}
+            This covenant is conditional on the Israelites upholding their end
+            of it. It is designed to make them into the type of people that
+            should inhabit the land and comes with blessings for obedience and
+            curses for disobedience.
           </p>
           <br />
           <p>

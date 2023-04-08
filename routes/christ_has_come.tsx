@@ -1,8 +1,12 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryHyperlink from '../components/StoryHyperlink.tsx';
+import ReferencedSection from '../islands/ReferencedSection.tsx';
+import { isSelectedID } from '../utils/index.ts';
 
-export default function ChristHasCome() {
+export default function ChristHasCome(props: PageProps) {
   return (
     <>
       <Head>
@@ -13,11 +17,22 @@ export default function ChristHasCome() {
           <h1 class="text-xl font-semibold text-center">Christ Has Come</h1>
           <br />
           <p>
-            Finally, thousands of years after covenants were made with Abraham,
-            Moses, and David, the promised Messiah arrived. Jesus Christ was
-            born to the Virgin Mary in a small town and grew up in Nazareth in
-            the north of Palestine. He lived in relative obscurity for about 30
-            years before beginning his public ministry.
+            Finally, thousands of years after covenants were made with{' '}
+            <StoryHyperlink href="/the_solution?ref=abrahamic_covenant">
+              Abraham
+            </StoryHyperlink>
+            ,{' '}
+            <StoryHyperlink href="/a_covenant_people?ref=mosaic_covenant">
+              Moses
+            </StoryHyperlink>
+            , and{' '}
+            <StoryHyperlink href="/a_covenant_king?ref=davidic_covenant">
+              David
+            </StoryHyperlink>
+            , the promised Messiah arrived. Jesus Christ was born to the Virgin
+            Mary in a small town and grew up in Nazareth in the north of
+            Palestine. He lived in relative obscurity for about 30 years before
+            beginning his public ministry.
           </p>
           <br />
           <p>
@@ -34,8 +49,14 @@ export default function ChristHasCome() {
             of Passover. He was tried by Pontius Pilate and then crucified, even
             though no charges were substantiated. After he died, he was taken
             off the cross and buried in a tomb. On the third day, he rose from
-            the grave, proving the claims he had made all along. He met with his
-            disciples after his resurrection and appeared to many more people.
+            the grave, proving the claims he had made all along.{' '}
+            <ReferencedSection
+              id="promised"
+              selected={isSelectedID(props, 'promised')}
+              content="He had conquered the power of the serpent."
+            />{' '}
+            He met with his disciples after his resurrection and appeared to
+            many more people.
           </p>
           <br />
           <p>
