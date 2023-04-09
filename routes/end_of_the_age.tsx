@@ -1,6 +1,8 @@
 import { Head } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 import ReferencedSection from '../islands/ReferencedSection.tsx';
 import { isSelectedID } from '../utils/index.ts';
 
@@ -10,10 +12,9 @@ export default function EndOfTheAge(props: PageProps) {
       <Head>
         <title>End of the Age</title>
       </Head>
+      <TableOfContents currentPath={props.route} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">End of the Age</h1>
-          <br />
+        <StoryBox title="End of the Age">
           <p>
             The end of the story will mark the end of this present age, which
             will come when Jesus Christ returns in all his power. At that time,
@@ -37,7 +38,8 @@ export default function EndOfTheAge(props: PageProps) {
             This glorious end is our eternal hope, and we eagerly await the day
             when everything will be made right.
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10">
           <BackStepButton href="/the_already_but_not_yet" content="Back" />
         </div>

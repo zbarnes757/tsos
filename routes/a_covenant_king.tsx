@@ -2,19 +2,21 @@ import { Head } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 import ReferencedSection from '../islands/ReferencedSection.tsx';
 import { isSelectedID } from '../utils/index.ts';
 
 export default function ACovenantKing(props: PageProps) {
+  const currentPath = props.route;
   return (
     <>
       <Head>
         <title>A Covenant King</title>
       </Head>
+      <TableOfContents currentPath={currentPath} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">A Covenant King</h1>
-          <br />
+        <StoryBox title="A Covenant King">
           <p>
             After Joshua's death, the Israelites are led by a series of judges,
             who act as both political and spiritual leaders. However, the
@@ -55,7 +57,8 @@ export default function ACovenantKing(props: PageProps) {
               content="Despite his sins, God promises that the Messiah will come from David's line, and David's reign is seen as a foreshadowing of the reign of Christ."
             />
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/a_covenant_people" content="Back" />
           <NextStepButton href="/exile" content="Next" />

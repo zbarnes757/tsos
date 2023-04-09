@@ -1,18 +1,22 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
 import StoryHyperlink from '../components/StoryHyperlink.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 
-export default function TheFall() {
+export default function TheFall(props: PageProps) {
+  const currentPath = props.route;
+
   return (
     <>
       <Head>
         <title>The Fall</title>
       </Head>
+      <TableOfContents currentPath={currentPath} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">Mankind's Folly</h1>
-          <br />
+        <StoryBox title="Mankind's Folly">
           <p>
             In the{' '}
             <StoryHyperlink href="/in_the_beginning?ref=the_garden">
@@ -51,7 +55,8 @@ export default function TheFall() {
             </StoryHyperlink>{' '}
             All is not lost.
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/in_the_beginning" content="Back" />
           <NextStepButton href="/the_problem" content="Next" />

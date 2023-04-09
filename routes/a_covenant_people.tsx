@@ -2,19 +2,21 @@ import { Head } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 import ReferencedSection from '../islands/ReferencedSection.tsx';
 import { isSelectedID } from '../utils/index.ts';
 
 export default function ACovenantPeople(props: PageProps) {
+  const currentPath = props.route;
   return (
     <>
       <Head>
         <title>A Covenant People</title>
       </Head>
+      <TableOfContents currentPath={currentPath} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">A Covenant People</h1>
-          <br />
+        <StoryBox title="A Covenant People">
           <p>
             The story jumps ahead 500 years, as the descendants of Jacob, known
             as Israel, are now living as slaves in Egypt. Despite their growth
@@ -53,7 +55,8 @@ export default function ACovenantPeople(props: PageProps) {
             before they enter their promised land, and Joshua succeeds him.
             Joshua leads the people into the land, and they settle it.
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/the_solution" content="Back" />
           <NextStepButton href="/a_covenant_king" content="Next" />

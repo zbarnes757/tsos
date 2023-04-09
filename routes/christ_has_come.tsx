@@ -2,20 +2,22 @@ import { Head } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
 import StoryHyperlink from '../components/StoryHyperlink.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 import ReferencedSection from '../islands/ReferencedSection.tsx';
 import { isSelectedID } from '../utils/index.ts';
 
 export default function ChristHasCome(props: PageProps) {
+  const currentPath = props.route;
   return (
     <>
       <Head>
         <title>Christ Has Come</title>
       </Head>
+      <TableOfContents currentPath={currentPath} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">Christ Has Come</h1>
-          <br />
+        <StoryBox title="Christ Has Come">
           <p>
             Finally, thousands of years after covenants were made with{' '}
             <StoryHyperlink href="/the_solution?ref=abrahamic_covenant">
@@ -63,7 +65,8 @@ export default function ChristHasCome(props: PageProps) {
             After 40 days, Jesus ascended into Heaven, where he sits at the
             right hand of the Father and waits to come again.
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/return_to_the_land" content="Back" />
           <NextStepButton href="/the_already_but_not_yet" content="Next" />

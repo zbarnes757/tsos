@@ -2,21 +2,21 @@ import { Head } from '$fresh/runtime.ts';
 import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 import ReferencedSection from '../islands/ReferencedSection.tsx';
 import { isSelectedID } from '../utils/index.ts';
 
 export default function TheSolution(props: PageProps) {
+  const currentPath = props.route;
   return (
     <>
       <Head>
         <title>A Solution is Promised</title>
       </Head>
+      <TableOfContents currentPath={currentPath} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">
-            A Solution is Promised
-          </h1>
-          <br />
+        <StoryBox title="A Solution is Promised">
           <p>
             The story takes a turn and focuses on one man and his family. His
             name is Abram (later Abraham) and his wife is Sarai (later Sarah).
@@ -44,7 +44,8 @@ export default function TheSolution(props: PageProps) {
             Egypt. In each generation, there is blatant dysfunction and sin but
             God always sees his promises come to fruition.
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/the_problem" content="Back" />
           <NextStepButton href="/a_covenant_people" content="Next" />

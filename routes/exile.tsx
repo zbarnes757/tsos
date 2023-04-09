@@ -1,17 +1,19 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 
-export default function Exile() {
+export default function Exile({ route: currentPath }: PageProps) {
   return (
     <>
       <Head>
         <title>Exile</title>
       </Head>
+      <TableOfContents currentPath={currentPath} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">Exile</h1>
-          <br />
+        <StoryBox title="Exile">
           <p>
             After David's reign, his son Solomon became king. Solomon was known
             for his wisdom and wealth, but he also made some poor decisions that
@@ -35,7 +37,8 @@ export default function Exile() {
             destroyed the temple in Jerusalem and took the people captive,
             forcing them to live in a foreign land.
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/a_covenant_king" content="Back" />
           <NextStepButton href="/return_to_the_land" content="Next" />

@@ -1,17 +1,19 @@
 import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
 import BackStepButton from '../components/BackStepButton.tsx';
 import NextStepButton from '../components/NextStepButton.tsx';
+import StoryBox from '../components/StoryBox.tsx';
+import TableOfContents from '../components/TableOfContents.tsx';
 
-export default function ReturnToTheLand() {
+export default function ReturnToTheLand({ route: currentPath }: PageProps) {
   return (
     <>
       <Head>
         <title>Return to the Land</title>
       </Head>
+      <TableOfContents currentPath={currentPath} />
       <div class="p-4 mx-auto flex-grow flex flex-col w-3/4 justify-center items-center">
-        <div class="border-yellow-600	border-4 rounded-lg w-3/4 py-5 px-8 bg-yellow-200 text-gray-700 font-sans">
-          <h1 class="text-xl font-semibold text-center">Return to the Land</h1>
-          <br />
+        <StoryBox title="Return to the Land">
           <p>
             Despite their disobedience, God remained faithful to His covenant
             with Abraham and promised to bring His people back to the land.
@@ -28,7 +30,8 @@ export default function ReturnToTheLand() {
             Messiah to come. They waited eagerly for their messiah to save them
             from the oppressive kingdoms that ruled them.
           </p>
-        </div>
+        </StoryBox>
+
         <div class="pt-10 w-full flex  justify-evenly">
           <BackStepButton href="/exile" content="Back" />
           <NextStepButton href="/christ_has_come" content="Next" />
