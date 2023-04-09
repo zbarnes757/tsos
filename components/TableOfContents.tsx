@@ -19,7 +19,7 @@ export default function TableOfContents({ currentPath }: TableOfContentsProps) {
   ];
 
   return (
-    <div class="bg-gray-100 pt-5 px-10 h-full">
+    <div class="bg-white pt-5 px-10 h-full shadow-lg text-gray-900 font-sans text-lg">
       <ol>
         {pages.map(({ href, text }) => (
           <li

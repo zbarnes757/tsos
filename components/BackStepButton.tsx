@@ -6,7 +6,7 @@ export default function BackStepButton(
   return (
     <a
       href={props.href}
-      class="cursor-pointer rounded-md bg-gray-600 px-5 py-3 text-gray-200 font-semibold text-lg flex pl-2 items-center hover:text-gray-400 tracking-wide"
+      class="rounded-md bg-white px-7 py-3 text-gray-900 font-semibold text-lg flex pl-5 items-center hover:bg-gray-400 tracking-wide shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
